@@ -1,5 +1,11 @@
-* {
-    background-color: rgb(234, 234, 234);
+body {
+    background: url('../images/color-photo.jpg') center fixed no-repeat;
+}
+
+@media screen and (max-width:768px) {
+    .body {
+        background: url('../images/color-photo.jpg') center cover no-repeat;
+    }
 }
 
 .panel {
@@ -17,17 +23,16 @@
 }
 
 .theButton {
-    height: 60px;
-    width: 122px;
+    height: 80px;
+    width: 120px;
     border-radius: 8px;
     margin: 0 4px 0 4px;
     text-align: center;
-    background-color: #555;
     color: #FFF;
     text-transform: uppercase;
     font-family: dosis;
     font-size: 14px;
-    padding: 30px 3px 3px 0;
+    padding: 1em 2em 1em 2em;
     border: solid 2px #fff;
     /* border used to stop jump when border is applied*/
     display: inline-block;
@@ -40,29 +45,40 @@
 }
 
 .superButton {
-    background-image: linear-gradient(to right, yellow, orange, red, green, blue, indigo, violet);
+    background: #cacaca;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     height: 80px;
-    width: 90%;
+    width: 20%;
     margin: auto;
-    border-radius: 8px;
+    border-radius: 2px;
     text-align: center;
     color: #FFF;
     font-family: dosis;
     font-size: 30px;
     padding-top: 30px;
-    /* display: none;*/
     border: solid 2px #fff;
     /* border used to stop jump when border is applied*/
+    margin-top: 2rem;
+    z-index: 999;
+}
+
+h1 {
+    color: #fff;
+    margin-top: 2rem;
 }
 
 /* Pink RGB Colors */
 
 .pink:nth-of-type(1) {
     background-color: rgb(255, 192, 203);
+    color: black;
 }
 
 .pink:nth-of-type(2) {
     background-color: rgb(255, 182, 193);
+    color: black;
 }
 
 .pink:nth-of-type(3) {
@@ -166,10 +182,12 @@
 
 .blue:nth-of-type(2) {
     background-color: rgb(176, 224, 230);
+    color: black;
 }
 
 .blue:nth-of-type(3) {
     background-color: rgb(173, 216, 230);
+    color: black;
 }
 
 .blue:nth-of-type(4) {
@@ -301,4 +319,59 @@
 
 .orange:nth-of-type(8) {
     background-color: rgb(139, 90, 43);
+}
+
+/* Grey RGB Colors */
+
+.grey:nth-of-type(1) {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.grey:nth-of-type(2) {
+    background-color: rgb(105, 105, 105);
+    color: black;
+}
+
+.grey:nth-of-type(3) {
+    background-color: rgb(128, 128, 128);
+    color: black;
+}
+
+.grey:nth-of-type(4) {
+    background-color: rgb(169, 169, 169);
+}
+
+.grey:nth-of-type(5) {
+    background-color: white;
+}
+
+.grey:nth-of-type(6) {
+    background-color: rgb(211, 211, 211);
+}
+
+.grey:nth-of-type(7) {
+    background-color: rgb(220, 220, 220);
+}
+
+.grey:nth-of-type(8) {
+    background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 430px) {
+    .superButton {
+        height: 60px;
+        width: 50%;
+        font-size: 1em;
+    }
+    .theButton {
+        height: 25px;
+        width: 40px;
+        margin: 0 1px 0 1px;
+        font-size: 3px;
+        padding-top: 2em;
+    }
+    .col-md-6 {
+        padding: 0 !important;
+    }
 }
