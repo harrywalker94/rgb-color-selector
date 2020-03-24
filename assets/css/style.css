@@ -1,67 +1,78 @@
 body {
-    background: url('../images/color-photo.jpg') center fixed no-repeat;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/color-umbrella.jpg') center/cover fixed no-repeat;
 }
 
 @media screen and (max-width:768px) {
     .body {
-        background: url('../images/color-photo.jpg') center cover no-repeat;
+        background: url('../images/color-umbrella.jpg') center cover no-repeat;
     }
 }
 
-.panel {
-    margin: auto;
-    width: 80%;
-    margin-top: 1em;
-    display: block;
+/*############################## Navbar ##############################*/
+
+nav {
+    position: absolute;
+    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav {
+    text-decoration: none !important;
+    letter-spacing: 2px;
+}
+
+.navbar-logo img {
+    height: 4rem;
+}
+
+.color-container {
+    margin-top: 6rem;
 }
 
 #btn {
     display: block;
     margin: auto;
-    width: 40%;
-    margin-top: 2em;
+    width: 80%;
+    text-align: center;
 }
 
 .theButton {
-    height: 80px;
-    width: 120px;
+    height: 55px;
+    width: 160px;
     border-radius: 8px;
     margin: 0 4px 0 4px;
     text-align: center;
     color: #FFF;
     text-transform: uppercase;
     font-family: dosis;
-    font-size: 14px;
+    font-size: .7rem;
     padding: 1em 2em 1em 2em;
     border: solid 2px #fff;
     /* border used to stop jump when border is applied*/
     display: inline-block;
-    vertical-align: top;
-    transition: all .4s ease-in-out;
+    vertical-align: bottom;
+    transition: all .2s ease-in-out;
 }
 
 .theButton:hover {
     transform: scale(1.1);
 }
 
-.superButton {
-    background: #cacaca;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    height: 80px;
-    width: 20%;
-    margin: auto;
-    border-radius: 2px;
+.rgbButton {
+    width: 70%;
+}
+
+.hexButton {
+    width: 70%;
+}
+
+#hexConvert {
+    width: 40%;
     text-align: center;
-    color: #FFF;
-    font-family: dosis;
-    font-size: 30px;
-    padding-top: 30px;
-    border: solid 2px #fff;
-    /* border used to stop jump when border is applied*/
-    margin-top: 2rem;
-    z-index: 999;
+}
+
+#rgbPaste {
+    width: 40%;
+    text-align: center;
 }
 
 h1 {
@@ -371,7 +382,17 @@ h1 {
         font-size: 3px;
         padding-top: 2em;
     }
-    .col-md-6 {
-        padding: 0 !important;
+    #btn {
+        font-size: .6rem;
+    }
+    #hexConvert {
+        width: 100%;
+        text-align: center;
+        font-size: .6rem;
+    }
+    #rgbPaste {
+        width: 100%;
+        text-align: center;
+        font-size: .6rem;
     }
 }

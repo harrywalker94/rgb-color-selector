@@ -1,29 +1,51 @@
 $(document).ready(function () {
-  //will display rgb value of selected panel in the reset panel
-  $(".theButton").mouseenter(function () {
-    var colorText = $(this).css("background-color");
-    $(".superButton").text(colorText);
-  });
-
-  $("#btn").click(function () {
-    // Single line Reset function executes on click of Reset Button
-    $(".superButton").text("");
-  });
-
   /* Button for copying the RGB Color */
   $(".theButton").click(function () {
     // Store the text you want to copy in variable
     var text = $(this).css("background-color");
+    $("#rgbPaste").val(text);
 
-    // Move the text to input tag to execute copy command
-    var tempElement = $("<input>")
-      .val(text)
-      .appendTo("body")
-      .select();
-    document.execCommand("copy");
-    tempElement.remove();
+    var rgb = text;
+    var hexConversion =
+      "#" +
+      rgb
+        .substr(4, rgb.indexOf(")") - 4)
+        .split(",")
+        .map(color => parseInt(color).toString(16))
+        .join("");
 
-    alert("RGB Colour Copied");
+    console.log(hexConversion);
+    $("#hexConvert").val(hexConversion);
   });
 
 });
+
+function copyRGB() {
+  /* Get the text field */
+  var copyText = document.getElementById("rgbPaste");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("RGB: " + copyText.value);
+}
+
+function copyHex() {
+  /* Get the text field */
+  var copyText = document.getElementById("hexConvert");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("HEX: " + copyText.value);
+}
