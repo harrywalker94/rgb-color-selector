@@ -32,7 +32,7 @@ function copyRGB() {
   document.execCommand("copy");
 
   /* Alert the copied text */
-  alert("RGB: " + copyText.value);
+  alert("RGB: " + copyText.value + " Copied!");
 }
 
 function copyHex() {
@@ -47,5 +47,5 @@ function copyHex() {
   document.execCommand("copy");
 
   /* Alert the copied text */
-  alert("HEX: " + copyText.value);
+  alert("HEX: " + copyText.value + " Copied!");
 }
